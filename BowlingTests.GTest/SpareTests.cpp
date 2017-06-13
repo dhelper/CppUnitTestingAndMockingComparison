@@ -16,7 +16,7 @@ protected:
 	}
 };
 
-TEST_F(SpareTests, SecondRoundZero_ScoreIsZero)
+TEST_F(SpareTests, SecondRoundZero_ScoreIsTen)
 {
 	game.Roll(0);
 	game.Roll(0);
