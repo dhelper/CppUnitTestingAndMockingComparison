@@ -9,6 +9,7 @@ class SpareTests : public Test
 protected:
 	Game game;
 
+
 	void SetUp() override
 	{
 		game.Roll(7);
@@ -21,7 +22,7 @@ TEST_F(SpareTests, SecondRoundZero_ScoreIsTen)
 	game.Roll(0);
 	game.Roll(0);
 
-	ASSERT_EQ(10, game.Score());
+	ASSERT_EQ(11, game.Score());
 }
 
 TEST_F(SpareTests, RollSomeValueInSecondRound_ScoreEqualValuePlusTenPlusRound)

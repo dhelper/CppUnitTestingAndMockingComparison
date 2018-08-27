@@ -19,7 +19,9 @@ TEST(DistributedCalculatorTests, Calculate_ReturnTwoValidNumbers_ServerCalled)
 	std::string dummy = "http://base";
 	FakeRestApiClient fakeClient(dummy);
 
-	EXPECT_CALL(fakeClient, HttpGet(StrEq("/Add?1&2"))).Times(1).WillOnce(Return("3"));
+	EXPECT_CALL(fakeClient, HttpGet(StrEq("/Add?1&2")))
+					.Times(AtLeast(1))
+					.WillOnce(Return("3"));
 
 	Calculator calculator(fakeDataAccess, fakeClient);
 

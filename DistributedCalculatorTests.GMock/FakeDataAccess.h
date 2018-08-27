@@ -1,7 +1,7 @@
 #pragma once
 #include "gmock/gmock.h"
 #include "../DistributedCalculator/DataAccess.h"
-#include "../../../../../../../Projects/vcpkg/installed/x86-windows/include/gmock/gmock-generated-function-mockers.h"
+#include "gmock/gmock-generated-function-mockers.h"
 
 class FakeDataAccess : public DataAccess
 {
